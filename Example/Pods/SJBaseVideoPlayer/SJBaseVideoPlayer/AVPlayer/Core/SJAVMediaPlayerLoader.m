@@ -48,6 +48,9 @@ static void *kPlayer = &kPlayer;
             AVAsset *avAsset = target.avAsset;
             if ( avAsset == nil ) {
                 avAsset = [AVURLAsset URLAssetWithURL:target.mediaURL options:nil];
+                if (target.resourceLoaderDelegate != nil) {
+                    [[(AVURLAsset *)avAsset resourceLoader] setDelegate:target.resourceLoaderDelegate queue:dispatch_queue_create("resourceLoader", NULL)];
+                }
             }
             avPlayerItem = [AVPlayerItem playerItemWithAsset:avAsset];
         }

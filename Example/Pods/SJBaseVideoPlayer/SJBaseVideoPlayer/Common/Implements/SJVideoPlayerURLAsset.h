@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 试用结束的位置, 单位秒
 @property (nonatomic) NSTimeInterval trialEndPosition;
 
+@property(nonatomic, weak, nullable) id<AVAssetResourceLoaderDelegate> resourceLoaderDelegate;
+
 @property (nonatomic, strong, null_resettable) SJPlayModel *playModel;
 - (id<SJVideoPlayerURLAssetObserver>)getObserver;
 
