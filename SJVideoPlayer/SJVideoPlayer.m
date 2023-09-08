@@ -502,7 +502,7 @@ NS_ASSUME_NONNULL_BEGIN
         if ( !self ) return ;
         // refresh edge button items
         if ( self.switcher.currentIdentifier == SJControlLayer_Edge ) {
-            [self _updateAppearStateForMoteItemIfNeeded];
+//            [self _updateAppearStateForMoteItemIfNeeded];
             [self _updateAppearStateForClipsItemIfNeeded];
             [self _updateContentForDefinitionItemIfNeeded];
         }
@@ -566,7 +566,7 @@ NS_ASSUME_NONNULL_BEGIN
                 [_moreItem addAction:[SJEdgeControlButtonItemAction actionWithTarget:self action:@selector(_moreItemWasTapped:)]];
                 [_defaultEdgeControlLayer.topAdapter addItem:_moreItem];
             }
-            [self _updateAppearStateForMoteItemIfNeeded];
+//            [self _updateAppearStateForMoteItemIfNeeded];
         }
         else {
             _defaultMoreSettingControlLayer = nil;
